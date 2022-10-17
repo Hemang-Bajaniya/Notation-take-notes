@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+    position: relative;
+    height: 100vh;
+    background: #fff;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+nav h3{
+    margin: 0 1rem;
+    color: #fff;
+}
+
+nav img#clear{
+    height: 1rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 28px;
+    opacity: 0;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+nav img#logo{
+    height: 2.12rem;
+    margin-inline: 1rem;
+    cursor: pointer;
+}
+
+nav img#logo:hover{
+    rotate: 360deg;
+    transition: .6s ease-in-out;
+}
+
+.search{
+    transition: .4s ease-in-out;
+}
+
+nav input{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 1.75rem;
+    width: 12rem;
+    margin: 0 1rem;
+    padding: 7px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: all .4s ease-in-out;
+    position: relative;
+    background: rgba(238, 238, 238, 0.15);
+}
+
+nav input:focus{
+    filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));
+    background-color: white;
+    border-color: #0056c7;
+}
+
+nav input:focus+img#clear{
+    display: inline;
+    opacity: 1;
+}
+
+nav .hembar{
+    height: 2rem;
+    width: 2rem;
+    display: none;
+    position: relative;
+    right: 1rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    top: 3px;
+}
+
+nav .hembar .bar{
+    height: 2px;
+    background-color: #333;
+    width: 90%;
+    border-radius: 1px;
+    margin: 5px 0px;
+    transition: .4s ease;
+}
+
+.open .bar:nth-child(1){
+    rotate: -45deg;
+    transform: translateY(5px);
+}
+
+.open .bar:nth-child(2){
+    display: none;
+}
+
+.open .bar:nth-child(3){
+    transform: translateY(-5px);
+    rotate: 45deg;
+}
+
+.box .search{
+    transform: translateX(0);
+}
+
+h1{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    margin-top: 1rem;
+    padding: 0 10px;
+}
+
+span#line{
+    width: 70%;
+    background-color: rgb(87, 87, 87);
+    display: block;
+    margin: 1rem auto 0;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.container{
+    height: auto;
+    width: 60%;
+    border: 1px solid rgb(161, 161, 161);
+    display: flex;
+    margin: 1rem auto;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 230px;
+}
+
+.container h3{
+    font-weight: lighter;
+}
+
+.container textarea{
+    height: 5.2rem;
+    border-radius: 6px;
+    border: 1px solid rgb(199, 199, 199);
+    width: 100%;
+    padding: none;
+    padding: 6px;
+    outline: transparent;
+    resize: none;
+    font-size: 1rem;
+}
+
+.container textarea:focus{
+    border-color: transparent;
+    outline: 2px solid #7aafff;
+    transition: .1s ease;
+}
+
+button{
+    height: 2rem;
+    width: 5rem;
+    font-size: .9rem;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease;
+    margin: 1rem 0;
+}
+
+button:hover{
+    background-color: #0056c7;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+button.sve{
+    background-color: transparent;
+    color: #1a73e8;
+    border: 1px solid #1a73e8;
+    display: none;
+}
+
+.save button.sve{
+    display: inline;
+}
+
+button.sve:hover{
+    background-color: #c4deff;
+}
+
+.container textarea,button{
+    margin: 5px 0;
+}
+
+.notes{
+    width: 58%;
+    display: flex;
+    margin: 1rem auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.notes .card{
+    height: auto;
+    max-height: 10.5rem;
+    max-height: fit-content;
+    display: inline-block;
+    width: 15rem;
+    padding: 10px;
+    position: relative;
+    margin: 1rem .5rem 0rem .5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.15);
+    transition: all .2s ease;
+}
+
+.notes .card .pt{
+    max-height: 5rem;
+}
+
+.notes .card:hover img{
+    opacity: .45;
+}
+
+.notes .card:hover{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notes .card img{
+    height: .9rem;
+    position: absolute;
+    right: 1rem;
+    top: .8em;
+    transition: .4s ease;
+    opacity: 0;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: content-box;
+}
+
+.notes .card img:hover{
+    opacity: 1;
+    background: rgba(175, 175, 175, 0.2);
+}
+
+.notes h3,p,button{
+    margin: 5px 0;
+}
+
+.notes h3{
+    font-weight: lighter;
+}
+
+.notes p{
+    color: rgb(104, 104, 104);
+}
+
+@media screen and (max-width:500px) {
+    .search{
+        position: absolute;
+        right: 0;
+        top: 4.5rem;
+        background-color: rgba(226, 226, 226, 0.1);
+        backdrop-filter: blur(3px);
+        height: 100%;
+        display: flex;
+        width: 12rem;
+        transform: translateX(14rem);
+        justify-content: start;
+        border-left: 1px solid rgb(145, 145, 145);
+        z-index: 100;
+    }
+    .search input{
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        border: none;
+        border-bottom: 1px solid rgba(133, 133, 133, 0.822);
+        border-radius: 0;
+        background-color: transparent;
+        padding-bottom: 2px;
+    }
+    nav img#clear{
+        top: 23px;
+    }
+    .search input:focus{
+        border-color: #333;
+        background-color: transparent;
+    }
+    .search input,input::placeholder{
+        color: black;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    nav .hembar{
+        display: block;
+    }
+}
+
+@media screen and (max-width:1325px) {
+    .notes{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:810px){
+    .notes{
+        width: 66%;
+    }
+    .notes .card img{
+        opacity: .45;
+    }
+}

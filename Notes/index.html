@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Notation</title>
+</head>
+<body onload="clean()">
+    <nav id="nav">
+        <img src="img/sticky-fill.svg" id="logo" alt="logo">
+        <div class="search">
+            <form action="post">
+                <input type="text" name="search" id="sbox" placeholder="Search notes" oninput="find(this.id)">
+                <img src="img/xmark-solid.svg" title="Clear" id="clear" onclick="clean(this.id)">
+            </form>
+        </div>
+
+        <div class="hembar" id="hem" onclick="change()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <h1>Welcome to Notation</h1>
+
+    <div class="container">
+            <h3>Add a note</h3>
+            <textarea id="note" cols="30" rows="10"></textarea>
+            <button id="add" onclick="add()">Add Note</button>
+    </div>
+
+    <h1>Your Notes</h1>
+    <span id="line"></span>
+
+    <div class="notes" id="notesection">
+    </div>
+</body>
+<script>
+    function change()
+    {
+        document.getElementById('hem').classList.toggle('open');
+        document.getElementById('nav').classList.toggle('box');
+    }
+</script>
+</html>
