@@ -66,7 +66,7 @@ function createNote()
     {
         var randomColor = Math.floor(Math.random()*16777215).toString(16);
         html+= `<div class="card hidden" id="edit">
-        <img src="Notes/img/pen-solid.svg" alt="" title="Edit" id='${i+1}' onclick="edit(this.id)">
+        <img src="/Notes/img/pen-solid.svg" alt="" title="Edit" id='${i+1}' onclick="edit(this.id)">
         <h3>Notes-${i+1}</h3>
         <div class='pt' style="overflow-y: auto;">
         <p id='card-txt' class='txt' style="word-wrap: break-word">${ele}</p>
