@@ -10,7 +10,7 @@
 </head>
 <body onload="clean()">
     <nav id="nav">
-        <img src="Notes/img/sticky-fill.svg" id="logo" alt="logo">
+        <img src="Notes/img/pen-solid.svg" id="logo" alt="logo">
         <div class="search">
             <form action="post">
                 <input type="text" name="search" id="sbox" placeholder="Search notes" oninput="find(this.id)">
@@ -37,6 +37,15 @@
     <span id="line"></span>
 
     <div class="notes" id="notesection">
+        <div class="card hidden" id="edit">
+            <img src="Notes/img/pen-solid.svg" alt="" title="Edit" id='2' onclick="edit(this.id)">
+            <h3>Notes-2</h3>
+            <div class='pt' style="overflow-y: auto;">
+            <p id='card-txt' class='txt' style="word-wrap: break-word">hello</p>
+            </div>
+            <button onclick="remove(this.id)" id='2'>Delete</button>
+            <button class='sve' id='save-2' onclick='save(this.id)'>Save</button>
+        </div>
     </div>
 </body>
 <script>
